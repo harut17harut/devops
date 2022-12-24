@@ -1,0 +1,15 @@
+#---------------------------------
+
+# Github action push ot docker hub
+
+#---------------------------------
+
+name: devops
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deployment:
+    runs-on:ubuntu-latest
