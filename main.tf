@@ -5,14 +5,19 @@ terraform {
       version = "~> 4.16"
     }
   }
+  cloud {
+    organization = "harut15harut"
+
+    workspaces {
+      name = "test"
+    }
+  }
 
   required_version = ">= 1.2.0"
 }
 
 provider "aws" {
-  region  = "eu-central-1"
-  access_key = "AKIAVCUUMEEEOU6TWG75"
-  secret_key = "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"
+  region = "eu-central-1"
 }
 
 resource "aws_instance" "app_server" {
