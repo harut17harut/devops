@@ -5,6 +5,13 @@ terraform {
       version = "~> 4.16"
     }
   }
+  cloud {
+    organization = "harut15harut"
+
+    workspaces {
+      name = "test"
+    }
+  }
 
   required_version = ">= 1.2.0"
 }
