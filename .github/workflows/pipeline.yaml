@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/terr
+      - uses: hashicorp/setup-terraform@v1
       - name: Terraform Init
         id: init
         run: terraform init
