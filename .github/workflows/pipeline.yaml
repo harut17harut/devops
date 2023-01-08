@@ -6,12 +6,22 @@
 
 name: Terraform create ec2 instance
 run-name: Zuzu mankakan shompayn
-on: [push]
-inputs:
-  instance_name:
-  description: 'Instance name'
-  required: optional
-  type: string
+on:
+  workflow_dispatch:
+      inputs:
+        name:
+          type: choice
+          description: Who to greet
+          options: 
+          - monalisa
+          - cschleiden
+        message:
+          required: true
+        use-emoji:
+          type: boolean
+          description: Include  emojis
+        environment:
+          type: environment
 jobs:
   terraform-create-instance:
     runs-on: ubuntu-latest
