@@ -10,6 +10,11 @@ on: [push]
 
 jobs:
   terraform-create-instance:
+    inputs:
+      instance_name:
+        description: 'Instance name'
+        required: optional
+        type: string
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
