@@ -6,7 +6,7 @@
 
 name: Terraform create ec2 instance
 run-name: Zuzu mankakan shompayn
-on:
+on: [push]
   workflow_dispatch:
      inputs:
      instance_name:
